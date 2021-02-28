@@ -8,9 +8,14 @@ const routers = [
     part: '/',
     icon: 'icon-home',
   },
-   {
+  {
     title: 'Category',
     part: '/category',
+    icon: 'icon-home',
+  },
+  {
+    title: 'Articles',
+    part: '/articles',
     icon: 'icon-home',
   },
 ];

@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import createRoutes from './router';
-import store from './../state/configureStore';
+import createRoutes from './routers';
+import { PersistGate } from 'redux-persist/integration/react';
+import configureStore from './../state/configureStore';
 import 'antd/dist/antd.css';
 
-class App extends React.Component {
+class App extends Component {
   render() {
+    const {store, persistor} = configureStore;
     return (
       <Provider store={store}>
-        <div>
-          { createRoutes() }
-        </div>
+        <PersistGate persistor={persistor}>
+          <div>
+            {createRoutes()}
+          </div>
+        </PersistGate>
       </Provider>
     )
   }
