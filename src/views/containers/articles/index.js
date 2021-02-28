@@ -6,7 +6,7 @@ import './style.scss';
 
 const Articles = ({ actions, data }) => {
   useEffect(() => {
-    actions.requestArticles();
+    actions.getArticles();
   }, [actions]);
 
 
@@ -44,7 +44,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators(
       {
-        requestArticles: actions.getArticles
+        getArticles: actions.getArticles
       },
       dispatch
     )

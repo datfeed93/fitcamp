@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import createRoutes from './router';
+import createRoutes from './routers';
 import { PersistGate } from 'redux-persist/integration/react';
 import configureStore from './../state/configureStore';
 import 'antd/dist/antd.css';
